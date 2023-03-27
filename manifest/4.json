@@ -1,0 +1,11 @@
+{
+    "description": "The Necro Scepter is a dark and foreboding weapon of immense power, said to be crafted from the bones of fallen warriors and imbued with the darkest of magic.", 
+    "image": "https://arweave.net/mnwuhiIbcne6swxK0Vm98OK-azPV-x3-_dGCsMSZbrw", 
+    "name": "Necro Scepter",
+    "attributes": [
+        {
+            "trait_type": "Damage", 
+            "value": 9
+        }
+    ]
+  }

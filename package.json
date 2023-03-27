@@ -1,0 +1,25 @@
+{
+  "name": "zkevm-erc1155",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "uploadFiles": "./node_modules/.bin/ts-node upload/arweaveFiles.ts",
+    "uploadFolder": "./node_modules/.bin/ts-node upload/arweaveFolder.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.10",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@bundlr-network/client": "^0.10.5",
+    "@openzeppelin/contracts": "^4.8.2",
+    "bignumber.js": "^9.1.1",
+    "dotenv": "^16.0.3"
+  }
+}
