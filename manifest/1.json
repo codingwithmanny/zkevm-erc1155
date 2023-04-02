@@ -1,11 +1,11 @@
 {
-    "description": "The Blade of Souls is a legendary weapon steeped in mystery and lore. It is said to have been created by the gods themselves, imbued with the power to vanquish even the most malevolent of beings", 
-    "image": "https://arweave.net/h3kkGN_QRfhYWbZlQb5N2bSaqj6HNB4_pGxLfsdhWuo", 
+    "description": "The Blade of Souls is a legendary weapon steeped in mystery and lore. It is said to have been created by the gods themselves, imbued with the power to vanquish even the most malevolent of beings.",
+    "image": "https://arweave.net/h3kkGN_QRfhYWbZlQb5N2bSaqj6HNB4_pGxLfsdhWuo",
     "name": "Blade Of Souls",
     "attributes": [
         {
-            "trait_type": "Damage", 
+            "trait_type": "Damage",
             "value": 12
         }
     ]
-  }
+}

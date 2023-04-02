@@ -15,11 +15,12 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 contract ZkMythicCards is ERC1155, Ownable, Pausable, ERC1155Burnable, ERC1155Supply {
     // Extending functionality
     using Strings for uint256;
+    // Used to keep track of a random number generated for selecting one of the four items
     uint256 public randomNumber;
-
 
     /**
      * Main constructor seting the the baseURI
+     * newuri - sets the base url for where we are storing our manifest JSON files
      */
     constructor(string memory newuri)
         ERC1155(newuri)
@@ -48,6 +49,7 @@ contract ZkMythicCards is ERC1155, Ownable, Pausable, ERC1155Burnable, ERC1155Su
 
     /**
      * @dev Creates random number based on number of loops to generate
+     * (This is before VRF is supported on zkEVM)
      */
     function generateRandomNumber(uint256 loopCount) public {
         for (uint256 i = 0; i < loopCount; i++) {
@@ -57,13 +59,16 @@ contract ZkMythicCards is ERC1155, Ownable, Pausable, ERC1155Burnable, ERC1155Su
     }
 
     /**
-     * @dev Creates `amount` tokens of token type `id`, and assigns them to `to`.
+     * @dev Creates `amount` tokens of token type `id`, and assigns them to `msg.sender`.
      */
     function mint(uint256 amount)
         public
     {
         for (uint i = 0; i < amount; i++) {
+            // generateRandomNumber creates a new number everytime just before minting
             generateRandomNumber(i);
+            // 4 is the max number and 1 is the minimum number
+            // _mint(to, tokenId, amount, data)
             _mint(msg.sender, randomNumber % 4 + 1, 1, "");
         }
     }
@@ -82,11 +87,19 @@ contract ZkMythicCards is ERC1155, Ownable, Pausable, ERC1155Burnable, ERC1155Su
 
     /**
      * @dev See {IERC1155MetadataURI-uri}.
+     * Metadata displayed for NFT tokenID - Ex: 1.json
      */
     function uri(uint256 _tokenId) override public view returns (string memory) {
         if(!exists(_tokenId)) {
             revert("URI: nonexistent token");
         }
         return string(abi.encodePacked(super.uri(_tokenId), Strings.toString(_tokenId), ".json"));
+    }
+
+    /**
+     * @dev Contract-level metadata
+     */
+    function contractURI() public view returns (string memory) {
+        return string(abi.encodePacked(super.uri(0), "contract.json"));
     }
 }

@@ -1,11 +1,11 @@
 {
-    "description": "The Antarctic Axe is a legendary tool used by explorers in the harshest and most unforgiving environments on the planet.", 
-    "image": "https://arweave.net/R5XqHv1UKWOazGJDX0iLe7GxqLByn3Zr5iYTCq-toko", 
+    "description": "The Antarctic Axe is a legendary tool used by explorers in the harshest and most unforgiving environments on the planet.",
+    "image": "https://arweave.net/R5XqHv1UKWOazGJDX0iLe7GxqLByn3Zr5iYTCq-toko",
     "name": "Antarctic Axe",
     "attributes": [
         {
-            "trait_type": "Damage", 
+            "trait_type": "Damage",
             "value": 8
         }
     ]
-  }
+}

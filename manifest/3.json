@@ -1,11 +1,11 @@
 {
-    "description": "The Paladin's Fire Jewel is a legendary gemstone that has been passed down from generation to generation among the holy knights of the land.", 
-    "image": "https://arweave.net/QeV-FZNE4U-sDX659aQjHqnj1ocEHqGOlZm57k1mHxU", 
+    "description": "The Paladin's Fire Jewel is a legendary gemstone that has been passed down from generation to generation among the holy knights of the land.",
+    "image": "https://arweave.net/QeV-FZNE4U-sDX659aQjHqnj1ocEHqGOlZm57k1mHxU",
     "name": "Paladin's Fire Jewel",
     "attributes": [
         {
-            "trait_type": "Damage", 
+            "trait_type": "Damage",
             "value": 10
         }
     ]
-  }
+}

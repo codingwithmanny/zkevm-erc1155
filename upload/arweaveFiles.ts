@@ -63,7 +63,7 @@ const bundlr = new Bundlr("http://node1.bundlr.network", "matic", privateKey); /
         for (let i = 0; i < svgFiles.length; i++) {
             const fileToUpload = path.join(__dirname, '..', 'svg', svgFiles[i]);
             const response = await bundlr.uploadFile(fileToUpload);
-            console.log(`https://arweave.net/${response.id}`);
+            console.log(`${ARWEAVE_TX_URL}${response.id}`);
         }
         console.groupEnd();
     } catch (e) {
